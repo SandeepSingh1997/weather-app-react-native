@@ -1,4 +1,5 @@
 import { SafeAreaView, View, Text, FlatList } from 'react-native'
+import TempItem from '../components/TempItem'
 
 const DATA = [
   {
@@ -22,18 +23,8 @@ const DATA = [
 ]
 
 const renderTemp = ({ item }) => (
-  <Temp location={item.location} min={item.min_temp} max={item.max_temp} />
+  <TempItem location={item.location} min={item.min_temp} max={item.max_temp} />
 )
-
-const Temp = ({ location, max, min }) => {
-  return (
-    <View>
-      <Text>location: {location}</Text>
-      <Text>min: {min}</Text>
-      <Text>max: {max}</Text>
-    </View>
-  )
-}
 
 const Separator = () => (
   <View style={{ height: 2, backgroundColor: 'red' }}></View>
