@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
+import CurrentWeather from './src/components/CurrentWeather'
+import UpcomingWeather from './src/components/UpcomingWeather'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello</Text>
-      <StatusBar style="auto" />
+      <CurrentWeather />
+      <UpcomingWeather />
     </View>
   )
 }
@@ -14,7 +15,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    marginTop: StatusBar.currentHeight
   }
 })
